@@ -1,12 +1,9 @@
 package com.example.asus_pc.panda_tvs;
 
-import android.os.Bundle;
-import android.support.annotation.IdRes;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -127,10 +124,10 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 break;
         }
     }
-
+//xhr小黄人好
     private void liall(FragmentTransaction transaction) {
         if(homeFragment!=null){
-            transaction.hide(homeFragment);
+         transaction.hide(homeFragment);
         }
         if(observeFragment!=null){
             transaction.hide(observeFragment);
