@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.annotation.IdRes;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.FrameLayout;
@@ -52,6 +53,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         live = (RadioButton) findViewById(R.id.live);
         livechina = (RadioButton) findViewById(R.id.live_home);
         shouye.setOnClickListener(this);
+        Log.e("TAG", "initView: "+"cwl+33333333333333333333333333333333333333333333333333" );
         guancha.setOnClickListener(this);
         wenhua.setOnClickListener(this);
         live.setOnClickListener(this);
@@ -96,7 +98,6 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                    transaction.show(observeFragment);
 
                }
-
                 break;
 
             case R.id.wenhua:
@@ -124,8 +125,6 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                     transaction.show(liveChinaFragment);
                 }
                 break;
-
-
         }
     }
 
