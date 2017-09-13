@@ -129,6 +129,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         if(homeFragment!=null){
          transaction.hide(homeFragment);
         }
+        //大家好我是李强
         if(observeFragment!=null){
             transaction.hide(observeFragment);
         }
