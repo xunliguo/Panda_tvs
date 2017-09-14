@@ -1,11 +1,9 @@
 package com.example.asus_pc.panda_tvs;
 
-import android.os.Bundle;
-import android.support.annotation.IdRes;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.RadioButton;
@@ -60,6 +58,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         image1 = (ImageView) findViewById(R.id.image1);
         livechina = (RadioButton) findViewById(R.id.live_home);
         shouye.setOnClickListener(this);
+        Log.e("TAG", "initView: "+"cwl+33333333333333333333333333333333333333333333333333" );
         guancha.setOnClickListener(this);
         wenhua.setOnClickListener(this);
         live.setOnClickListener(this);
@@ -106,6 +105,14 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                     transaction.show(observeFragment);
                 }
 
+               if (observeFragment==null){
+                   observeFragment = new ObserveFragment();
+                   transaction.add(R.id.mContainer,observeFragment);
+
+               }else{
+                   transaction.show(observeFragment);
+
+               }
                 break;
 
             case R.id.wenhua:
@@ -138,15 +145,14 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                     transaction.show(liveChinaFragment);
                 }
                 break;
-
-
         }
     }
-
+//xhr小黄人好
     private void liall(FragmentTransaction transaction) {
         if(homeFragment!=null){
-            transaction.hide(homeFragment);
+         transaction.hide(homeFragment);
         }
+        //大家好我是李强
         if(observeFragment!=null){
             transaction.hide(observeFragment);
         }
