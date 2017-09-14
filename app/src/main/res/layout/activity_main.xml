@@ -10,7 +10,7 @@
     android:layout_width="match_parent"
     android:layout_height="50dp"
     android:orientation="horizontal"
-    android:background="@color/colorPrimary"
+    android:background="#1F539E"
     >
     <TextView
         android:layout_width="wrap_content"
@@ -22,6 +22,15 @@
         android:textColor="#FFFFFF"
         android:textSize="20sp"
         />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:id="@+id/image1"
+        android:layout_marginLeft="5dp"
+        android:visibility="invisible"
+        android:src="@drawable/panda_sign"
+        />
+
 <ImageView
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
