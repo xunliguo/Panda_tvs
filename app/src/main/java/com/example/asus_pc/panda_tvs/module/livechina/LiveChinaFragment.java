@@ -18,12 +18,11 @@ import butterknife.BindView;
 public class LiveChinaFragment extends BaseFragment implements LiveChinaContract.View {
 
     LiveChinaContract.Presenter presenter;
-    @BindView(R.id.mResultTv)
-    TextView mResultTv;
+
 
     @Override
     protected int getLayoutId() {
-        return R.layout.home_fragment;
+        return R.layout.livechina_fragment;
     }
 
     @Override
@@ -34,7 +33,6 @@ public class LiveChinaFragment extends BaseFragment implements LiveChinaContract
     @Override
     protected void loadData() {
 
-        presenter.start();
 
     }
 
@@ -52,7 +50,6 @@ public class LiveChinaFragment extends BaseFragment implements LiveChinaContract
     @Override
     public void setResult(PandaLiveBean pandaLiveBean) {
 
-        mResultTv.setText(pandaLiveBean.getLive().get(0).getTitle());
     }
 
     @Override

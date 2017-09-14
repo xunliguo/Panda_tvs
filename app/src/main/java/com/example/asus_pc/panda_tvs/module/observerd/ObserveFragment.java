@@ -11,6 +11,8 @@ import com.example.asus_pc.panda_tvs.model.entity.PandaLiveBean;
 
 import butterknife.BindView;
 
+import static com.example.asus_pc.panda_tvs.R.id.mResultTv;
+
 /**
  * Created by xingge on 2017/7/11.
  */
@@ -18,12 +20,11 @@ import butterknife.BindView;
 public class ObserveFragment extends BaseFragment implements ObserverContract.View {
 
    ObserverContract.Presenter presenter;
-    @BindView(R.id.mResultTv)
-    TextView mResultTv;
+
 
     @Override
     protected int getLayoutId() {
-        return R.layout.home_fragment;
+        return R.layout.observr_fragment;
     }
 
     @Override
@@ -34,7 +35,7 @@ public class ObserveFragment extends BaseFragment implements ObserverContract.Vi
     @Override
     protected void loadData() {
 
-        presenter.start();
+
 
     }
 
@@ -52,7 +53,7 @@ public class ObserveFragment extends BaseFragment implements ObserverContract.Vi
     @Override
     public void setResult(PandaLiveBean pandaLiveBean) {
 
-        mResultTv.setText(pandaLiveBean.getLive().get(0).getTitle());
+
     }
 
     @Override

@@ -146,6 +146,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 }
                 break;
         }
+        transaction.commit();
     }
 //xhr小黄人好
     private void liall(FragmentTransaction transaction) {
